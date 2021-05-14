@@ -1,7 +1,15 @@
 #ifndef CONNECTDLG_H
 #define CONNECTDLG_H
 
-#include <QtGui>
+//#include <QtGui>
+#include <QDialog>
+#include <QLineEdit>
+#include <QDialogButtonBox>
+#include <QIntValidator>
+#include <QFormLayout>
+#include <QLabel>
+#include <QMessageBox>
+#include <QPushButton>
 
 class ConnectDlg : public QDialog
 {

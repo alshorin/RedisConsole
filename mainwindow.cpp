@@ -1,3 +1,4 @@
+#include <QtWidgets>
 #include "mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -92,7 +93,7 @@ void MainWindow::setupPanels()
     console = new Console;
     filter = new QLineEdit;
 
-    values->setTabStopWidth(8);
+    values->setTabStopWidth(8);         // setTabStopWidth deprecated
     values->setReadOnly(true);
     filter->setPlaceholderText("quick key filter");
 
@@ -136,7 +137,11 @@ void MainWindow::setupPanels()
 
 void MainWindow::buildMenu()
 {
-    QMenu *fileMenu = menuBar()->addMenu("&File");
+//    QMenu *fileMenu;
+//    QMenuBar menuBar()->addMenu(fileMenu);
+//    fileMenu = menuBar()->addMenu(tr("&File"));
+//    fileMenu->addAction(newAct);
+    QMenu *fileMenu = menuBar()->addMenu(tr("&File"));
     fileMenu->addAction("&Open Connection", this, SLOT(openConnectionDialog()), QKeySequence("Ctrl+O"));
     fileMenu->addAction("&Close", this, SLOT(closeConnection()), QKeySequence("Ctrl+W"));
     fileMenu->addSeparator();

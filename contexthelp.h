@@ -2,7 +2,12 @@
 #define CONTEXTHELP_H
 
 #include <QObject>
-#include <QtGui>
+//#include <QtGui>
+#include <QStatusBar>
+#include <QFile>
+#include <QMessageBox>
+#include <QTextStream>
+
 
 class ContextHelp : public QObject
 {

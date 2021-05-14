@@ -1,7 +1,22 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QtGui>
+//#include <QtGui>
+#include <QMainWindow>
+
+QT_BEGIN_NAMESPACE
+class QAction;
+class QActionGroup;
+class QLabel;
+class QMenu;
+QT_END_NAMESPACE
+
+#include <QListWidget>
+#include <QSplitter>
+#include <QMessageBox>
+#include <QVBoxLayout>
+
+
 #include "client.h"
 #include "console.h"
 #include "connectdlg.h"
